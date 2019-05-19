@@ -60,9 +60,9 @@ nav {
 a {
   color: inherit;
   text-decoration: none;
-}
-a:hover {
-  opacity: 0.7;
+  /*  &:hover {
+      opacity: 0.7;
+    }*/
 }
 
 #welcome-section {
@@ -76,9 +76,42 @@ h1, h2 {
 }
 
 #projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
-  padding-top: 45vh;
   background-color: #d3d3d3;
+}
+
+.project-tile {
+  padding-top: 20px;
+}
+.project-tile a {
+  position: relative;
+}
+.project-tile a img {
+  width: 100px;
+  border-radius: 50%;
+}
+.project-tile a .hidden {
+  top: -86px;
+  left: 0px;
+}
+.project-tile a:hover .hidden {
+  display: block;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid;
+  border-radius: 50%;
+  background-color: rgba(211, 211, 211, 0.9);
+  font-weight: bold;
+  font-size: .9em;
 }
 
 #contact {
@@ -101,12 +134,36 @@ h1, h2 {
 }
 
 .social-links {
+  position: relative;
+}
+.social-links i {
   width: 100px;
   height: 100px;
-  border-radius: 100%;
-  background: #d3d3d3;
-  font-weight: bold;
+  border-radius: 50%;
+  font-size: 120px;
+  color: #000;
   line-height: 100px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.social-links .fa-twitter {
+  background-color: #00aced;
+  font-size: 90px;
+  color: #fff;
+}
+.social-links .fa-facebook-official {
+  color: #3B5998;
+}
+.social-links .fa-envelope {
+  font-size: 75px;
+  line-height: 95px;
+}
+.social-links .hidden {
+  top: 0px;
+}
+
+.social-links:hover .hidden {
+  display: block;
 }
 
 footer {
