@@ -20,7 +20,7 @@ html,
 body {
   font-size: 18px;
   color: #86c232;
-  font-family: sans-serif;
+  font-family: 'Aldrich', sans-serif;
   text-align: center;
 }
 
@@ -81,12 +81,16 @@ h2 {
   background-color: #004285;
 }
 
+#projects {
+  padding: 50px 0 20px;
+}
+
 .project-links, .socials {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
   max-width: 960px;
-  padding-top: 20px;
   margin: 0 auto;
 }
 
@@ -99,6 +103,7 @@ h2 {
 
 .project-links a, .socials a {
   position: relative;
+  margin-top: 20px;
 }
 
 .project-links img {
